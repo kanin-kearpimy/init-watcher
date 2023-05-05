@@ -1,0 +1,23 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "initwatcher"
+version = "1.0.0"
+description = "Watch current directory and create __init__.py"
+readme = "README.md"
+keywords = ["init file", "directory watcher"]
+dependencies = []
+requires-python = ">=3.7.5"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/kanin-kearpimy/init-watcher"
+
+[project.scripts]
+initwatcher = "initwatcher.__main__:main"
