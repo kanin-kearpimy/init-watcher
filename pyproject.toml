@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "initwatcher"
-version = "1.0.0"
+version = "1.0.1"
 description = "Watch current directory and create __init__.py"
 readme = "README.md"
 keywords = ["init file", "directory watcher"]
