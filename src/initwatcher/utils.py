@@ -3,10 +3,10 @@ from __future__ import annotations
 EXCLUDES = ["__pycache__", "test"]
 
 
-def compare_directories(a_directory, b_directory):
+def compare_directories(old_directory, new_directory):
     differences = []
-    for directory in b_directory:
-        if directory not in a_directory:
+    for directory in new_directory:
+        if directory not in old_directory:
             differences.append(directory)
 
     return differences
