@@ -1,15 +1,19 @@
-from .utils import compare_directories, create_init_file
-from .dircheck import Directory
 import os
+from .utils import compare_directories, create_init_file
+from .Directory import Directory
 
 current_dir = os.getcwd()
 
 
 def main():
+    """main function of application"""
+
     old_directory = Directory(current_dir)
 
+    # first time initilization.
     create_init_file(old_directory.get_directories())
 
+    # watcher for file change.
     while True:
         new_directory = Directory(current_dir)
         differ = compare_directories(
@@ -21,6 +25,8 @@ def main():
 
 
 if __name__ == "__main__":
+    """entry point of command line"""
+
     print("Start Watching __init__")
-    print("Current Directory: {}".format(current_dir))
+    print(f"Current Directory: {current_dir}")
     main()

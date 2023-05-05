@@ -87,9 +87,12 @@ def test_not_create_init_file():
     should not create __init__.py in /test/utils
     because test/ is excluded
     """
+    directory = f"{current_dir}/test/utils"
+    os.makedirs(directory)
     paths = [f"{current_dir}/test/utils"]
     utils.create_init_file(paths)
     assert "__init__.py" not in os.listdir(paths[0])
+    os.rmdir(directory)
 
 
 def test_create_init_file():
