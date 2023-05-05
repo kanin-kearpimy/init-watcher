@@ -27,6 +27,6 @@ def main():
 if __name__ == "__main__":
     """entry point of command line"""
 
-    print("Start Watching __init__")
+    print("Start watching current directory")
     print(f"Current Directory: {current_dir}")
     main()

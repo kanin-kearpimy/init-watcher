@@ -10,6 +10,7 @@ class Directory:
 
     def __init__(self, current_directory: str):
         self.current_directory = current_directory
+        self.directories = []
         self.__get_all_directory(current_directory)
 
     def __get_all_directory(self, current: str):

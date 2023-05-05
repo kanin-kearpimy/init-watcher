@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-EXCLUDES = ["__pycache__", "test"]
+EXCLUDES = ["__pycache__", "test", ".py_test_cache", ".venv", ".vscode", "dist"]
 
 
 def compare_directories(old_directory: list[str], new_directory: list[str]):
@@ -44,7 +44,7 @@ def create_init_file(paths: list[str]):
     Return: None
     """
     for path in paths:
-        if is_exclude_directory(path) == True:
+        if is_exclude_directory(path) is True:
             continue
-        file = open("{}/__init__.py".format(path), "w")
+        file = open(f"{path}/__init__.py", "w")
         file.close()
